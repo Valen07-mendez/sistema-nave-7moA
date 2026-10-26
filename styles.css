@@ -1,0 +1,1246 @@
+
+/* ========================================
+   LA NAVE - ESPACIO CULTURAL
+   Verde y violeta pastel · Estética de circo
+======================================== */
+
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+:root {
+    --fondo: #f5f6ed;
+    --blanco: #fffdf7;
+    --verde: #b9d0a9;
+    --verde-claro: #d9e6cf;
+    --verde-oscuro: #426a53;
+    --violeta: #80649a;
+    --violeta-claro: #e5d9f2;
+    --violeta-medio: #c7b2d8;
+    --rosa: #f0dce3;
+    --amarillo: #f1e5b7;
+    --texto: #302c31;
+    --texto-suave: #706875;
+    --borde: #e5e3d8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* ---------- ENCABEZADO ---------- */
+
+.topbar {
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand img {
+    display: block;
+    width: 85px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Navegación */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.nav a:hover {
+    color: var(--violeta);
+}
+
+/* Botón del encabezado */
+
+.nav-cta {
+    padding: 11px 18px;
+    border: 1px solid var(--verde);
+    border-radius: 30px;
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.25s ease;
+}
+
+.nav-cta:hover {
+    background: var(--verde-claro);
+}
+
+
+/* ---------- PORTADA ---------- */
+
+.intro {
+    min-height: 490px;
+    padding: 55px 6% 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+/* Texto de la portada */
+
+.intro-copy {
+    position: relative;
+    max-width: 540px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--verde-oscuro);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.eyebrow > span {
+    display: inline-block;
+    width: 18px;
+    height: 7px;
+    border-radius: 10px;
+    background: var(--violeta);
+    flex-shrink: 0;
+}
+
+.intro h1 {
+    margin-bottom: 22px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(43px, 5vw, 66px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -1.5px;
+}
+
+.intro h1 em,
+.section h2 em,
+.join h2 em,
+.contact h2 em {
+    color: var(--violeta);
+    font-weight: 400;
+}
+
+.intro-text {
+    max-width: 420px;
+    margin-bottom: 28px;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--verde);
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    transition: gap 0.25s ease;
+}
+
+.text-link:hover {
+    gap: 22px;
+}
+
+.doodle-star {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    color: var(--violeta);
+    font-size: 28px;
+}
+
+
+/* ---------- ILUSTRACIÓN ABSTRACTA CON LOGO ---------- */
+
+.intro-art {
+    position: relative;
+    isolation: isolate;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Círculo violeta */
+
+.intro-art .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: var(--violeta-claro);
+    transform: translate(-50%, -50%);
+}
+
+/* Logo real: reemplaza la carpa geométrica */
+
+.tent-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: min(88%, 390px);
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tent-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estrellas decorativas */
+
+.intro-art .art-star {
+    position: absolute;
+    z-index: 3;
+    color: var(--violeta);
+    font-size: 27px;
+    line-height: 1;
+}
+
+.intro-art .star-one {
+    top: 12%;
+    left: 8%;
+}
+
+.intro-art .star-two {
+    right: 8%;
+    bottom: 18%;
+    color: var(--verde-oscuro);
+}
+
+/* Frases estilo collage */
+
+.intro-art .art-note {
+    position: absolute;
+    z-index: 4;
+    max-width: 190px;
+    padding: 12px 15px;
+    background: var(--blanco);
+    color: var(--texto);
+    box-shadow: 3px 4px 0 #e6e8dc;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.intro-art .note-one {
+    top: 12%;
+    right: 0;
+    transform: rotate(6deg);
+}
+
+.intro-art .note-two {
+    bottom: 10%;
+    left: 0;
+    transform: rotate(-6deg);
+}
+
+
+/* ---------- FRANJA DECORATIVA ---------- */
+
+.ticker {
+    width: 100%;
+    padding: 16px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+}
+
+.ticker span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* ---------- SECCIONES GENERALES ---------- */
+
+.section {
+    padding: 95px 6%;
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.section h2,
+.contact h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(35px, 4vw, 49px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.section-note {
+    max-width: 310px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ---------- GALERÍA DE TRES FOTOS ---------- */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.photo {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--verde-claro);
+    isolation: isolate;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.04);
+}
+
+/* Icono de imagen */
+
+.media-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: rgba(255, 253, 247, 0.95);
+    color: var(--verde-oscuro);
+    font-size: 11px;
+}
+
+/* Degradado inferior */
+
+.photo::after {
+    content: "";
+    position: absolute;
+    inset: 35% 0 0;
+    z-index: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(28, 30, 27, 0.82)
+    );
+    pointer-events: none;
+}
+
+/* Texto sobre la foto */
+
+.photo-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 22px;
+    color: white;
+}
+
+.photo-category {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.photo-overlay h3 {
+    margin-bottom: 5px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(19px, 2vw, 27px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.photo-overlay p {
+    max-width: 280px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* ---------- TALLERES ---------- */
+
+.workshops {
+    background: var(--blanco);
+}
+
+.handwritten {
+    color: var(--violeta);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    transform: rotate(-5deg);
+}
+
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.workshop {
+    position: relative;
+    min-height: 275px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 3px;
+    transition: transform 0.25s ease;
+}
+
+.workshop:hover {
+    transform: translateY(-5px);
+}
+
+.w-green {
+    background: var(--verde-claro);
+}
+
+.w-lilac {
+    background: var(--violeta-claro);
+}
+
+.w-pink {
+    background: var(--rosa);
+}
+
+.w-yellow {
+    background: var(--amarillo);
+}
+
+.workshop-number {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.workshop-emoji {
+    margin: 20px 0 10px;
+    color: var(--violeta);
+    font-size: 30px;
+}
+
+.workshop h3 {
+    margin-bottom: 10px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.workshop p {
+    margin-bottom: 22px;
+    color: #615b62;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.workshop a {
+    margin-top: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid currentColor;
+    color: var(--verde-oscuro);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ---------- AGENDA ---------- */
+
+.agenda {
+    background: var(--fondo);
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-item {
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 95px 1fr 45px;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.date-card {
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.date-green {
+    background: var(--verde-claro);
+}
+
+.date-lilac {
+    background: var(--violeta-claro);
+}
+
+.date-pink {
+    background: var(--rosa);
+}
+
+.date-card small {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.date-card strong {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.date-card span {
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.agenda-copy > span {
+    color: var(--violeta);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.agenda-copy h3 {
+    margin: 5px 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.agenda-copy p {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.round-arrow {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    color: var(--verde-oscuro);
+    transition: background 0.25s ease;
+}
+
+.round-arrow:hover {
+    background: var(--verde-claro);
+}
+
+.fine-print {
+    margin-top: 20px;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+
+/* ---------- COMUNIDAD ---------- */
+
+.join {
+    position: relative;
+    padding: 85px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--violeta-claro);
+    overflow: hidden;
+}
+
+.join .eyebrow {
+    justify-content: center;
+    color: var(--verde-oscuro);
+}
+
+.join h2 {
+    margin-bottom: 20px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(34px, 4vw, 49px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.join h2 em {
+    color: var(--violeta);
+}
+
+.join > p:not(.eyebrow) {
+    max-width: 540px;
+    margin-bottom: 25px;
+    color: #655b6b;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.join-button {
+    padding: 14px 23px;
+    border-radius: 30px;
+    background: var(--verde-oscuro);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.25s ease;
+}
+
+.join-button:hover {
+    background: #31523f;
+}
+
+.join-spark {
+    position: absolute;
+    top: 22px;
+    right: 12%;
+    color: var(--violeta);
+    font-size: 35px;
+}
+
+.join-doodle {
+    margin-top: 22px;
+    color: var(--violeta);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12px;
+    transform: rotate(-4deg);
+}
+
+
+/* ---------- MANTENIMIENTO ---------- */
+
+.care {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.care-text {
+    max-width: 430px;
+    margin-top: 20px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.care-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.care-list article {
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.care-list article:first-child {
+    border-top: 1px solid var(--borde);
+}
+
+.care-list article > span {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    font-size: 17px;
+}
+
+.care-list h3 {
+    margin-bottom: 5px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.care-list p {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ---------- CONTACTO ---------- */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--verde-claro);
+}
+
+.contact .eyebrow {
+    justify-content: center;
+}
+
+.contact > p:not(.eyebrow) {
+    max-width: 500px;
+    margin: 18px 0 25px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contact-button {
+    padding: 14px 23px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--verde-oscuro);
+    border-radius: 30px;
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.contact-button:hover {
+    background: var(--verde-oscuro);
+    color: white;
+}
+
+
+/* ---------- PIE DE PÁGINA ---------- */
+
+.footer {
+    padding: 35px 6% 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    background: var(--blanco);
+}
+
+.footer-brand img {
+    width: 75px;
+    height: 60px;
+}
+
+.footer > p {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.footer-links {
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--violeta);
+}
+
+.copyright {
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 1000px) {
+
+    .topbar {
+        gap: 15px;
+        padding: 10px 3%;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .nav-cta {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .intro {
+        padding-right: 4%;
+        padding-left: 4%;
+        gap: 20px;
+    }
+
+    .intro-art {
+        min-height: 360px;
+    }
+
+    .intro-art .sun {
+        width: 240px;
+        height: 240px;
+    }
+
+    .tent-logo {
+        width: min(88%, 330px);
+    }
+
+    .section {
+        padding: 75px 4%;
+    }
+
+    .workshop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .care {
+        gap: 35px;
+    }
+}
+
+
+/* ---------- CELULARES ---------- */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 110px;
+    }
+
+    .topbar {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .brand img {
+        width: 70px;
+        height: 50px;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        padding: 10px 0 5px;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    .nav a {
+        flex-shrink: 0;
+        font-size: 12px;
+    }
+
+    .nav-cta {
+        font-size: 10px;
+    }
+
+    .intro {
+        padding: 50px 6% 25px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .intro h1 {
+        font-size: clamp(43px, 10vw, 60px);
+    }
+
+    .intro-text {
+        font-size: 13px;
+    }
+
+    .doodle-star {
+        right: 0;
+    }
+
+    .intro-art {
+        min-height: 340px;
+        width: 100%;
+    }
+
+    .intro-art .sun {
+        width: 220px;
+        height: 220px;
+    }
+
+    .tent-logo {
+        width: min(85%, 300px);
+    }
+
+    .intro-art .note-one {
+        right: 0;
+        top: 8%;
+    }
+
+    .intro-art .note-two {
+        left: 0;
+        bottom: 7%;
+    }
+
+    .ticker {
+        justify-content: center;
+        gap: 12px 20px;
+        padding: 15px 4%;
+    }
+
+    .ticker span {
+        font-size: 9px;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .section h2,
+    .contact h2 {
+        font-size: 38px;
+    }
+
+    .section-note {
+        max-width: 420px;
+    }
+
+    /* Las tres fotos siguen cuadradas */
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .photo:last-child {
+        grid-column: 1 / -1;
+        aspect-ratio: 1.5 / 1;
+    }
+
+    .photo-overlay {
+        padding: 14px;
+    }
+
+    .photo-overlay h3 {
+        font-size: 21px;
+    }
+
+    .photo-overlay p {
+        font-size: 10px;
+    }
+
+    .photo-category {
+        font-size: 8px;
+    }
+
+    .workshop-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .workshop {
+        min-height: 270px;
+        padding: 20px 15px;
+    }
+
+    .workshop h3 {
+        font-size: 21px;
+    }
+
+    .workshop p {
+        font-size: 11px;
+    }
+
+    .agenda-item {
+        grid-template-columns: 70px 1fr 35px;
+        gap: 13px;
+    }
+
+    .date-card {
+        min-height: 80px;
+    }
+
+    .date-card strong {
+        font-size: 28px;
+    }
+
+    .agenda-copy h3 {
+        font-size: 20px;
+    }
+
+    .agenda-copy p {
+        font-size: 11px;
+    }
+
+    .round-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .join {
+        padding: 65px 6%;
+    }
+
+    .join h2 {
+        font-size: 36px;
+    }
+
+    .join > p:not(.eyebrow) {
+        font-size: 12px;
+    }
+
+    .care {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+
+/* ---------- CELULARES PEQUEÑOS ---------- */
+
+@media (max-width: 420px) {
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .nav-cta {
+        padding: 8px 10px;
+    }
+
+    .intro h1 {
+        font-size: 42px;
+    }
+
+    .intro-art {
+        min-height: 300px;
+    }
+
+    .intro-art .sun {
+        width: 190px;
+        height: 190px;
+    }
+
+    .tent-logo {
+        width: min(88%, 260px);
+    }
+
+    .intro-art .art-note {
+        max-width: 145px;
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo,
+    .photo:last-child {
+        grid-column: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workshop {
+        min-height: 230px;
+    }
+
+    .agenda-item {
+        grid-template-columns: 60px 1fr 30px;
+        gap: 10px;
+    }
+
+    .date-card {
+        min-height: 70px;
+    }
+
+    .date-card strong {
+        font-size: 25px;
+    }
+
+    .date-card span {
+        font-size: 7px;
+    }
+
+    .agenda-copy h3 {
+        font-size: 18px;
+    }
+
+    .agenda-copy p {
+        font-size: 10px;
+    }
+
+    .round-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .join h2 {
+        font-size: 31px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+
+
+/* ---------- ACCESIBILIDAD ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
